@@ -1,0 +1,1 @@
+for t in range(int(input())):print("YNEOS"[input().lower()!="yes"::2])
