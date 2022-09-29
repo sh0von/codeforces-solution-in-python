@@ -1,19 +1,19 @@
-t=int(input())
+t=int(input()) #number of test cases 
 for i in range(t):
-    n=int(input())
-    a=list(map(int,input().split()))
-    b=list(map(int,input().split()))
-    mxa=max(a)
-    mxb=max(b)
-    if mxa>mxb:
+    n=int(input()) #number of elements
+    a=list(map(int,input().split())) #list of elements of a
+    b=list(map(int,input().split())) #list of elements of b
+    mxa=max(a) #maximum element of a
+    mxb=max(b) #maximum element of b
+    if mxa>mxb: #if maximum element of a is greater than maximum element of b
         for j in range(n):
-            if a[j]<b[j]:
-                a[j],b[j]=b[j],a[j]
-        b.sort()
-        print(b[n-1]*mxa)
-    else:
+            if a[j]<b[j]: #if element of a is less than element of b
+                a[j],b[j]=b[j],a[j] #swap the elements
+        b.sort() #sort the list b
+        print(b[n-1]*mxa) #print the product of maximum element of a and second maximum element of b
+    else: #if maximum element of b is greater than maximum element of a
         for j in range(n):
-            if a[j]>b[j]:
-                a[j],b[j]=b[j],a[j]
-        a.sort()
-        print(a[n-1]*mxb)
+            if a[j]>b[j]: #if element of a is greater than element of b
+                a[j],b[j]=b[j],a[j] #swap the elements
+        a.sort() #sort the list a
+        print(a[n-1]*mxb) #print the product of maximum element of b and second maximum element of a
